@@ -1,0 +1,386 @@
+
+.tab {
+    margin-top: 20px;
+}
+
+.tab button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.tab button.active {
+    background-color: #0d8bf0;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tweet-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+}
+
+.click_div:hover{
+    cursor: pointer;
+    color: #1da1f2;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin: 4px 0px;
+}
+
+
+.bu{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+.tab button.active {
+    background-color: #ccc;
+}
+  
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    /* border: 1px solid #ccc;
+    border-top: none; */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+tbody td:first-child {
+    font-weight: bold;
+    color: var(--twitter-blue);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.search-bar{
+  /* display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: var(--white);
+  border-radius: 50px;
+  justify-content: center;
+  margin: 20px; */
+  box-shadow: var(--shadow);
+}
+
+.dropdown{
+  position: relative;
+  width: 280px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  background-color: var(--twitter-blue);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+
+.btn{
+  position: relative;
+  width: 280px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  background-color: var(--twitter-blue);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+}
+
+.dropdown-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  padding: 1rem 1.5rem;
+}
+
+.dropdown-list{
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--white);
+  transition: max-height 0.5s;
+  box-shadow: var(--shadow);
+}
+#list.show{
+  max-height: 300px;
+}
+.dropdown-list-item{
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 1rem 0 1rem 1.5rem;
+  cursor: pointer;
+  transition: margin-left 0.2s ease;
+}
+
+.dropdown-list-item:hover{
+  margin-left: 0.5rem;
+  color: var(--twitter-blue);
+}
+
+.search-box{
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.search-box input{
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--twitter-blue);
+  border: 0;
+  outline: 0;
+}
+
+.search-box i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.search-box input::placeholder{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--twitter-blue);
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Date input styles */
+input[type="datetime-local"] {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+/* Calendar icon styles */
+.calendar-icon {
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Placeholder text styles */
+input[type="datetime-local"]::placeholder {
+    color: #aaa;
+}
+
+/* CSS for Label Styling */
+
+/* Label styles */
+.date-label {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Date input container styles */
+.date-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+/* Date input styles */
+.date-input {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Calendar icon styles */
+.calendar-icon {
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Placeholder text styles */
+.date-input::placeholder {
+    color: #aaa;
+}
+
+.top-users-content, top-tweets-contents {
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.metrics-container {
+    display: flex;
+    max-width: 1600px;
+    margin: 20px auto;
+    justify-content: space-between;
+
+}
+
+.search-metrics-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.metrics-heading{
+    padding: 10px 0 10px 0;
+}
+/* inline scroll in a dive */
+.scrollable-div {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.custom-shadow{
+    box-shadow: var(--shadow);
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    :root {
+        --twitter-blue: #1da1f2;
+        --purple: #9a1663;
+        --white: #ffffff;
+        --grey: #fff7ee;
+        --shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px 0px;
+    }
+}
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--white);
+  height: 70vh;
+}

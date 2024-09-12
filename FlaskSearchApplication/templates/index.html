@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Twitter Search Application</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.turbo.min.js"></script>
+
+</head>
+
+<body>
+	<div class="flex flex-col items-center justify-center h-1/2">
+		<img src='static/twitter-color-svgrepo-com.svg' alt="Twitter Icon" class="h-1/2 w-16 top-0 -mt-8">
+		<h1 class="text-4xl font-bold text-gray-900">Twitter Search Application </h1>
+		
+	</div>
+	
+	
+	<div id="container" class="container">
+
+		<div date-rangepicker class="flex items-center justify-center">
+			<div class="relative">
+				<div class="absolute inset-y-0 right-0 flex items-center px-5 pointer-events-none">
+						 <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+						</svg>
+				</div>
+				<input name="stime" id="start_date" type="text" class="custom-shadow border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select start date">
+			</div>
+			<span class="mx-4 text-gray-500">to</span>
+			<div class="relative">
+				<div class="absolute inset-y-0 right-0 flex items-center px-5 pointer-events-none">
+						 <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+						</svg>
+				</div>
+				<input name="etime" id="end_date" type="text" class="custom-shadow border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select end date">
+		</div>
+		</div>
+		
+		<div class="flex flex-col items-center justify-center py-10">
+			<div class="search-bar flex items-center justify-center w-1/2 bg-white rounded-full my-5">
+				<div class="dropdown">
+					<div id="drop-text" class="dropdown-text">
+						<span id="span">Everything</span>
+						<i id="icon" class="fa-solid fa-chevron-down"></i>
+					</div>
+					<ul id="list" class="dropdown-list">
+						<li class="dropdown-list-item">Everything</li>
+						<li class="dropdown-list-item">User</li>
+						<li class="dropdown-list-item">Hashtag</li>
+					</ul>
+				</div>
+				<div class="search-box">
+					<input type="text" id="search-input" placeholder="Search Anything......."/>
+					<i class="fa-solid fa-magnifying-glass" onclick="searchTweets()"></i>
+				</div>
+			</div>
+			<div class="flex flex-col items-center justify-center">
+        <span class="mb-2">or</span>
+        <button id="metric_btn" onclick="btnMetric()" class="dropdown px-4 py-2 outline outline-offset-2 outline-cyan-500 text-grey-900 rounded-lg">Get top metrics</button>
+    </div>
+		<div id="fetch_time"></div>
+		</div>
+		<div class="metrics-container"> 
+			<div id="result_len"></div>
+			<div id="content" class="border-5 border-gray-300 rounded-lg p-4">
+				<div id ="top-users" class="top-users"></div>
+			</div>
+			<div id="content" class="border-5 border-gray-300 rounded-lg p-4 ">
+				<div id="top-tweets" class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900"></div>
+			</div>
+		</div>
+		<div id="searchResults">
+				<!-- Search results will be dynamically added here -->
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

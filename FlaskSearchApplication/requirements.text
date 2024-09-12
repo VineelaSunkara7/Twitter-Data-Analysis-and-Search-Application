@@ -1,0 +1,4 @@
+pymongo
+mysql
+flask
+flask-sqlalchemy

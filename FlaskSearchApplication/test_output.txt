@@ -1,0 +1,4 @@
+user_without_cache: {'name': 'John', 'tweets': ['tweet1', 'tweet2', 'tweet3']} | Fetch Time: 1009985923.7670898 ns
+hashtag_without_cache: [{'text': 'tweet with #python'}, {'text': 'another tweet with #python'}] | Fetch Time: 1001538038.2537842 ns
+string_without_cache: [{'text': 'tweet containing AI'}, {'text': 'another tweet with AI'}] | Fetch Time: 1000927209.854126 ns
+string_date_without_cache: [{'text': 'tweet containing AI on 2020-04-27'}, {'text': 'another tweet with AI on 2020-05-28'}] | Fetch Time: 1001478195.1904297 ns
