@@ -15,18 +15,3 @@ The project utilizes a Twitter dataset named "corona-out-3", encompassing variou
 ## Application Architecture
 
 ![image](https://github.com/KarthikNarra/Twitter-Search-Application/blob/master/Project_Architecture.jpg)
-
-
-## Contributors:
-
-Vineela Sunkara (https://github.com/VineelaSunkara1)
-
-Karthik Narra (https://github.com/KarthikNarra)
-
-Mounika Konda (https://github.com/MounikaKonda15)
-
-
-
-## Contribution:
-
-If you would like to contribute to this project, please fork the repository and submit a pull request with your changes. Be sure to follow the coding style and include tests for any new features or bug fixes.
